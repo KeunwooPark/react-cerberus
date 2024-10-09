@@ -17,7 +17,8 @@
     "paths": {
       "@react-cerberus/elements": [
         "packages/react-cerberus/elements/src/index.ts"
-      ]
+      ],
+      "@react-cerberus/web": ["packages/react-cerberus/web/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,3 +1,4 @@
+export * from './ElementType';
 export * from './Div';
 export * from './Span';
 export * from './H1';
