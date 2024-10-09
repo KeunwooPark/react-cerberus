@@ -1,0 +1,9 @@
+{
+  "name": "react-cerberus",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/react-cerberus/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project react-cerberus --web",
+  "targets": {}
+}
