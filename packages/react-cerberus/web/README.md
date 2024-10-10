@@ -1,7 +1,21 @@
-# web
+# @react-cerberus/web
 
-This library was generated with [Nx](https://nx.dev).
+It contains the `react-cereberus` initializer and the element renderers for the web platform.
 
-## Running unit tests
+## How to use
 
-Run `nx test web` to execute the unit tests via [Jest](https://jestjs.io).
+### Installation
+
+```bash
+npm install @react-cerberus/elements @react-cerberus/web
+```
+
+### Usage
+
+Run the initializer in your app's entry point:
+
+```tsx
+import { initReactCereberusWeb } from '@react-cerberus/web';
+
+initReactCereberusWeb();
+```

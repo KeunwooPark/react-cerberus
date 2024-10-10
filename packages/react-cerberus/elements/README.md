@@ -1,7 +1,3 @@
-# elements
+# @react-cerberus/elements
 
-This library was generated with [Nx](https://nx.dev).
-
-## Running unit tests
-
-Run `nx test elements` to execute the unit tests via [Jest](https://jestjs.io).
+This package contains the core elements of the `react-cerberus` framework.
