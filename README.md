@@ -51,6 +51,14 @@ If an UI library is built on top of `react-native-for-web`, it is not possible t
 
 ## Development
 
+## Install packages
+
+```bash
+npm install --legacy-peer-deps
+```
+
+We need to use `--legacy-peer-deps` because there are conflicts between `nx` libraries.
+
 ### How to publish
 
 From the [documentation](https://nx.dev/recipes/nx-release/publish-in-ci-cd):
