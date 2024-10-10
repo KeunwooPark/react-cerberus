@@ -11,6 +11,14 @@
       "options": {
         "commands": ["echo 'no test yet'"]
       }
+    },
+    "nx-release-publish": {
+      "executor": "@nx/js:release-publish",
+      "options": {
+        "packageRoot": "dist/packages/react-cerberus/elements",
+        "access": "public"
+      },
+      "dependsOn": ["build"]
     }
   }
 }
