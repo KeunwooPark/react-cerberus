@@ -11,6 +11,10 @@ permissions:
   contents: read
   id-token: write
 
+env:
+  NX_DB_CACHE: false
+  NX_NO_CLOUD: true
+
 jobs:
   main:
     runs-on: ubuntu-latest
@@ -26,17 +30,13 @@ jobs:
           cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Disable NX Cloud
-        run: |
-          echo "NX_NO_CLOUD=true" >> "$GITHUB_ENV"
-
       - run: npm ci --legacy-peer-deps
       - uses: nrwl/nx-set-shas@v4
 
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
       # - run: npx nx-cloud record -- echo Hello World
       # Nx Affected runs only tasks affected by the changes in this PR/commit. Learn more: https://nx.dev/ci/features/affected
-      - run: npx nx affected -t test build --verbose
+      - run: npx nx affected -t lint test build --verbose
 
       - name: Release Package
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
