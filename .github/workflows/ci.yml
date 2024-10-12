@@ -48,4 +48,6 @@ jobs:
 
       - name: Deploy web storybook
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: npx nx deploy web-storybook --projectToken=$CHROMATIC_PROJECT_TOKEN
+        env:
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+        run: npx nx deploy web-storybook --projectToken={{$CHROMATIC_PROJECT_TOKEN}}
