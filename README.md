@@ -2,6 +2,8 @@
 
 The goal of this framework is to provide a set of UI elements that guarantee consistent design and behavior across different platforms, such as web, iOS, and Android.
 
+If you want to see the elements, please visit the [web version storybook](https://670a53d50ce49e1b54c401ce-aweioqzvqw.chromatic.com/).
+
 ## How to use
 
 ### Installation
