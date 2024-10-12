@@ -50,4 +50,4 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         env:
           CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-        run: npx nx deploy web-storybook --projectToken={{$CHROMATIC_PROJECT_TOKEN}}
+        run: npx nx deploy web-storybook --configuration=ci

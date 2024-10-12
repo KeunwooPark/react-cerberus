@@ -12,6 +12,11 @@
         "command": "chromatic --project-token={args.projectToken} -d ../../dist/apps/web-storybook",
         "cwd": "apps/web-storybook"
       },
+      "configurations": {
+        "ci": {
+          "command": "chromatic -d ../../dist/apps/web-storybook --exit-zero-on-changes"
+        }
+      },
       "dependsOn": ["build-storybook"]
     },
     "build-storybook": {
