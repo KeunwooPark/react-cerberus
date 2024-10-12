@@ -18,6 +18,9 @@
       "@react-cerberus/elements": [
         "packages/react-cerberus/elements/src/index.ts"
       ],
+      "@react-cerberus/react-cerberus-story": [
+        "packages/react-cerberus-story/src/index.ts"
+      ],
       "@react-cerberus/web": ["packages/react-cerberus/web/src/index.ts"]
     }
   },
