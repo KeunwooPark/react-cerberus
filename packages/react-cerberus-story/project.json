@@ -1,0 +1,16 @@
+{
+  "name": "react-cerberus-story",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/react-cerberus-story/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project react-cerberus-story --web",
+  "targets": {
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo 'no tests'"
+      }
+    }
+  }
+}

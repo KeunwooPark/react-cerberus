@@ -1,0 +1,33 @@
+{
+  "name": "web-storybook",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/web-storybook",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project web-storybook --web",
+  "targets": {
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "chromatic --project-token={args.projectToken} -d ../../dist/apps/web-storybook",
+        "cwd": "apps/web-storybook"
+      },
+      "dependsOn": ["build-storybook"]
+    },
+    "build-storybook": {
+      "executor": "@nx/storybook:build",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/apps/web-storybook",
+        "configDir": "apps/web-storybook/.storybook"
+      },
+      "cache": true
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo 'no tests'"
+      }
+    }
+  }
+}
