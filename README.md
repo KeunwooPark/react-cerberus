@@ -10,10 +10,10 @@ If you want to see the elements, please visit the [web version storybook](https:
 
 ```bash
 # web platform
-npm install @react-cerberus/elements @react-cerberus/web
+> npm install @react-cerberus/elements @react-cerberus/web
 
 # React Native platform
-npm install @react-cerberus/elements @react-cerberus/native
+> npm install @react-cerberus/elements @react-cerberus/native
 ```
 
 ### Usage
@@ -53,7 +53,7 @@ If an UI library is built on top of `react-native-for-web`, it is not possible t
 
 ## Development
 
-## Install packages
+### Install packages
 
 ```bash
 npm install --legacy-peer-deps
@@ -68,3 +68,9 @@ From the [documentation](https://nx.dev/recipes/nx-release/publish-in-ci-cd):
 1. Run `nx release --skip-publish` locally. This will create a commit with the version and changelog updates, then create a tag for the new version.
 2. Push the changes (including the new tag) to the remote repository with `git push && git push --tags`.
 3. The CI workflow will automatically trigger and publish the packages to the npm registry.
+
+### Running Storybooks
+
+```bash
+
+```
