@@ -8,7 +8,7 @@ const config: StorybookConfig = {
   stories: [
     `${__dirname}/../../../packages/react-cerberus-story/src/**/*.@(mdx|stories.@(js|jsx|ts|tsx))`,
   ],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],
+  addons: [],
   framework: {
     name: '@storybook/react-vite',
     options: {},

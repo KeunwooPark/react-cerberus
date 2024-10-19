@@ -50,7 +50,7 @@
     "@nx/web": "20.0.0",
     "@nx/workspace": "20.0.0",
     "@rollup/plugin-url": "^8.0.2",
-    "@storybook/addon-essentials": "8.3.5",
+    "@storybook/addon-essentials": "^8.3.5",
     "@storybook/addon-interactions": "^8.2.8",
     "@storybook/core-server": "8.3.5",
     "@storybook/jest": "^0.2.3",
