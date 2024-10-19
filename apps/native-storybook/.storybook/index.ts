@@ -12,4 +12,5 @@ const StorybookUIRoot = view.getStorybookUI({
   },
 });
 
+console.log('StorybookUIRoot', StorybookUIRoot);
 export default StorybookUIRoot;

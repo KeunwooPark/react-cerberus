@@ -12,6 +12,7 @@
     "react-native-web": "*"
   },
   "scripts": {
+    "storybook-generate": "sb-rn-get-stories",
     "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/native-storybook"
   }
 }

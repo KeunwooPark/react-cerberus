@@ -75,6 +75,12 @@ From the [documentation](https://nx.dev/recipes/nx-release/publish-in-ci-cd):
 # web platform
 > npx nx storybook web-storybook
 
-# native platform
-> npx nx storybook native-storybook
+# native platform (it will start an Expo app)
+> npx nx start native-storybook
+```
+
+If you update `apps/native-storybook/.storybook` files, you would want to apply changes by building the files. Please run the following command:
+
+```bash
+> npx nx storybook-generate native-storybook
 ```
