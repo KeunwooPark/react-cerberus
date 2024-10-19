@@ -8,7 +8,12 @@ module.exports = withNx(
     outputPath: '../../../dist/packages/react-cerberus/native',
     tsConfig: './tsconfig.lib.json',
     compiler: 'babel',
-    external: ['react', 'react-dom', '@emotion/react/jsx-runtime'],
+    external: [
+      'react',
+      'react-dom',
+      'react-native',
+      '@emotion/react/jsx-runtime',
+    ],
     format: ['esm'],
     assets: [{ input: '.', output: '.', glob: 'README.md' }],
   },
