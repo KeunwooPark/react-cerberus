@@ -72,5 +72,9 @@ From the [documentation](https://nx.dev/recipes/nx-release/publish-in-ci-cd):
 ### Running Storybooks
 
 ```bash
+# web platform
+> npx nx storybook web-storybook
 
+# native platform
+> npx nx storybook native-storybook
 ```
