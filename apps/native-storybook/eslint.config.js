@@ -9,5 +9,13 @@ module.exports = [
     // Override or add rules here
     rules: {},
   },
-  { ignores: ['.expo', 'web-build', 'cache', 'dist'] },
+  {
+    ignores: [
+      '.expo',
+      'web-build',
+      'cache',
+      'dist',
+      '**/storybook.requires.ts',
+    ],
+  },
 ];
