@@ -3,7 +3,7 @@ const ElementTypes = [
   // 'h2',
   // 'h3',
   'div',
-  // 'span',
+  'span',
   // 'image',
   // 'paragraph',
   // 'animatedDiv',
