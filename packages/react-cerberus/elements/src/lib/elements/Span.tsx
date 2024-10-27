@@ -18,7 +18,7 @@ interface SpanProps {
 function SpanElement(props: SpanProps, ref: ForwardedRef<unknown>) {
   const { children, style, testID } = props;
   const renderer = getRenderer('span');
-  return renderer({ children, style, ref, testID });
+  return renderer.render({ children, style, ref, testID });
 }
 
 export const Span = forwardRef(SpanElement);

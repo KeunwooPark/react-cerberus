@@ -1,20 +1,17 @@
-import { RendererProps } from '@react-cerberus/elements';
 import { ForwardedRef, ReactNode } from 'react';
-import { styleToCSS } from '../lib/styleToCSS';
-import { css } from '@emotion/css';
+import { WebRenderer, WebRendererProps } from './WebRenderer';
 
-export function DivRenderer(props: RendererProps): ReactNode {
-  const { children, style, ref, testID } = props;
-  const cssString = styleToCSS(style);
-  return (
-    <div
-      data-testid={testID}
-      ref={ref as ForwardedRef<HTMLDivElement>}
-      className={css`
-        ${cssString}
-      `}
-    >
-      {children}
-    </div>
-  );
+export class DivRenderer extends WebRenderer {
+  renderElement(props: WebRendererProps): ReactNode {
+    const { children, className, ref, testID } = props;
+    return (
+      <div
+        data-testid={testID}
+        ref={ref as ForwardedRef<HTMLDivElement>}
+        className={className}
+      >
+        {children}
+      </div>
+    );
+  }
 }

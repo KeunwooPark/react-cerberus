@@ -8,8 +8,8 @@ import { SpanRenderer } from './renderer/SpanRenderer';
 
 export function initReactCereberusWeb() {
   const rendererPool: RendererPool = {
-    div: DivRenderer,
-    span: SpanRenderer,
+    div: new DivRenderer(),
+    span: new SpanRenderer(),
   };
 
   setRendererPool(rendererPool);

@@ -10,11 +10,19 @@ export interface RendererProps {
 }
 
 /**
- * Renderer is a function that returns a ReactNode for a certain Cerberus element.
+ * Renderer is an abstract class that renders a ReactNode for a certain Cerberus element.
  
  * @param props.args - The arguments of the renderer.
  * @param props.children - The children of the renderer.
  * @param props.style - The style of the renderer.
  * @param props.ref - The reference of the renderer.
  */
-export type Renderer = (props: RendererProps) => ReactNode;
+export abstract class Renderer {
+  abstract preprocessProps(props: RendererProps): RendererProps;
+  abstract renderElement(props: RendererProps): ReactNode;
+
+  render(props: RendererProps): ReactNode {
+    const preRenderedProps = this.preprocessProps(props);
+    return this.renderElement(preRenderedProps);
+  }
+}
