@@ -9,4 +9,5 @@ module.exports = [
     // Override or add rules here
     rules: {},
   },
+  { ignores: ['public', '.cache', 'node_modules'] },
 ];

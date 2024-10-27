@@ -1,4 +1,4 @@
-import { ForwardedRef, ReactNode } from 'react';
+import { ForwardedRef, ReactElement, ReactNode } from 'react';
 import { CerberusStyle } from '../style/CerberusStyle';
 
 export interface RendererProps {
@@ -19,9 +19,9 @@ export interface RendererProps {
  */
 export abstract class Renderer {
   abstract preprocessProps(props: RendererProps): RendererProps;
-  abstract renderElement(props: RendererProps): ReactNode;
+  abstract renderElement(props: RendererProps): ReactElement;
 
-  render(props: RendererProps): ReactNode {
+  render(props: RendererProps): ReactElement {
     const preRenderedProps = this.preprocessProps(props);
     return this.renderElement(preRenderedProps);
   }

@@ -3,10 +3,8 @@ import {
   setPlatform,
   setRendererPool,
 } from '@react-cerberus/elements';
-import { ViewRenderer } from './renderer';
 import { TextRenderer } from './renderer/TextRenderer';
-
-export * from './renderer';
+import { ViewRenderer } from './renderer/ViewRenderer';
 
 export function initReactCerberusNative(platform: 'ios' | 'android') {
   const rendererPool: RendererPool = {
@@ -15,6 +13,5 @@ export function initReactCerberusNative(platform: 'ios' | 'android') {
   };
 
   setRendererPool(rendererPool);
-
   setPlatform(platform);
 }
