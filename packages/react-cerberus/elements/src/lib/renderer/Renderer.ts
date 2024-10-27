@@ -18,5 +18,5 @@ export interface RendererProps {
  * @param props.ref - The reference of the renderer.
  */
 export abstract class Renderer {
-  abstract render(props: RendererProps): ReactNode;
+  abstract renderElement(props: RendererProps): ReactNode;
 }

@@ -19,7 +19,7 @@ interface DivProps {
 function DivElement(props: DivProps, ref: ForwardedRef<unknown>) {
   const { children, style, testID } = props;
   const renderer = getRenderer('div');
-  return renderer.render({ children, style, ref, testID });
+  return renderer.renderElement({ children, style, ref, testID });
 }
 
 export const Div = forwardRef(DivElement);

@@ -1,10 +1,10 @@
-import { RendererProps } from '@react-cerberus/elements';
+import { Renderer, RendererProps } from '@react-cerberus/elements';
 import { ForwardedRef, ReactNode } from 'react';
 import { styleToCSS } from '../lib/styleToCSS';
 import { css } from '@emotion/css';
 
-export class DivRenderer {
-  render(props: RendererProps): ReactNode {
+export class DivRenderer extends Renderer {
+  renderElement(props: RendererProps): ReactNode {
     const { children, style, ref, testID } = props;
     const cssString = styleToCSS(style);
     return (

@@ -3,7 +3,7 @@ import { LegacyRef, ReactNode } from 'react';
 import { View, ViewStyle } from 'react-native';
 
 export class ViewRenderer extends Renderer {
-  render(props: RendererProps): ReactNode {
+  renderElement(props: RendererProps): ReactNode {
     const { children, style, ref, testID } = props;
 
     return (
