@@ -10,8 +10,8 @@ export * from './renderer';
 
 export function initReactCerberusNative(platform: 'ios' | 'android') {
   const rendererPool: RendererPool = {
-    div: ViewRenderer,
-    span: TextRenderer,
+    div: new ViewRenderer(),
+    span: new TextRenderer(),
   };
 
   setRendererPool(rendererPool);
