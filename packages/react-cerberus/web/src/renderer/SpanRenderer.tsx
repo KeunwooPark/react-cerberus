@@ -1,8 +1,8 @@
-import { ForwardedRef, ReactNode } from 'react';
+import { ForwardedRef, ReactElement, ReactNode } from 'react';
 import { WebRenderer, WebRendererProps } from './WebRenderer';
 
 export class SpanRenderer extends WebRenderer {
-  renderElement(props: WebRendererProps): ReactNode {
+  renderElement(props: WebRendererProps): ReactElement {
     const { children, className, ref, testID } = props;
     return (
       <span
