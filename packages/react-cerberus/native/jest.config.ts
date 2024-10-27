@@ -1,13 +1,22 @@
-export default {
+module.exports = {
   displayName: 'native',
-  preset: '../../../jest.preset.js',
-  transform: {
-    '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',
-    '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nx/react/babel'] }],
+  preset: 'react-native',
+  resolver: '@nx/jest/plugins/resolver',
+  moduleFileExtensions: ['ts', 'js', 'html', 'tsx', 'jsx'],
+  setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
+  moduleNameMapper: {
+    '\\.svg$': '@nx/react-native/plugins/jest/svg-mock',
   },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  transform: {
+    '^.+.(js|ts|tsx)$': [
+      'babel-jest',
+      {
+        configFile: __dirname + '/.babelrc.js',
+      },
+    ],
+    '^.+.(bmp|gif|jpg|jpeg|mp4|png|psd|svg|webp)$': require.resolve(
+      'react-native/jest/assetFileTransformer.js'
+    ),
+  },
   coverageDirectory: '../../../coverage/packages/react-cerberus/native',
-  transformIgnorePatterns: [
-    'node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@sentry/react-native|native-base|react-native-svg)',
-  ],
 };

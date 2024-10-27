@@ -6,7 +6,6 @@ import { NativeRenderer } from './NativeRenderer';
 export class ViewRenderer extends NativeRenderer {
   renderElement(props: RendererProps): ReactElement {
     const { children, style, ref, testID } = props;
-
     return (
       <View
         ref={ref as LegacyRef<View>}
