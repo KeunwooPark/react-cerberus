@@ -18,5 +18,11 @@ export interface RendererProps {
  * @param props.ref - The reference of the renderer.
  */
 export abstract class Renderer {
+  abstract preprocessProps(props: RendererProps): RendererProps;
   abstract renderElement(props: RendererProps): ReactNode;
+
+  render(props: RendererProps): ReactNode {
+    const preRenderedProps = this.preprocessProps(props);
+    return this.renderElement(preRenderedProps);
+  }
 }

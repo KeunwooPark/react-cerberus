@@ -1,19 +1,14 @@
-import { Renderer, RendererProps } from '@react-cerberus/elements';
 import { ForwardedRef, ReactNode } from 'react';
-import { styleToCSS } from '../lib/styleToCSS';
-import { css } from '@emotion/css';
+import { WebRenderer, WebRendererProps } from './WebRenderer';
 
-export class SpanRenderer extends Renderer {
-  renderElement(props: RendererProps): ReactNode {
-    const { children, style, ref, testID } = props;
-    const cssString = styleToCSS(style);
+export class SpanRenderer extends WebRenderer {
+  renderElement(props: WebRendererProps): ReactNode {
+    const { children, className, ref, testID } = props;
     return (
       <span
         data-testid={testID}
         ref={ref as ForwardedRef<HTMLSpanElement>}
-        className={css`
-          ${cssString}
-        `}
+        className={className}
       >
         {children}
       </span>

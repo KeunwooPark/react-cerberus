@@ -1,8 +1,9 @@
-import { Renderer, RendererProps } from '@react-cerberus/elements';
+import { RendererProps } from '@react-cerberus/elements';
 import { LegacyRef, ReactNode } from 'react';
 import { View, ViewStyle } from 'react-native';
+import { NativeRenderer } from './NativeRenderer';
 
-export class ViewRenderer extends Renderer {
+export class ViewRenderer extends NativeRenderer {
   renderElement(props: RendererProps): ReactNode {
     const { children, style, ref, testID } = props;
 
